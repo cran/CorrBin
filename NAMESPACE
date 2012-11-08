@@ -1,10 +1,24 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
+# Export public functions 
+export(betabin.pdf)
+export(CBData)
+export(GEE.trend.test)
+export(mc.est)
+export(mc.test.chisq)
+export(NOSTASOT)
+export(qpower.pdf)
+export(ran.CBData)
+export(read.CBData)
+export(RS.trend.test)
+export(SO.LRT)
+export(SO.mc.est)
+export(SO.trend.test)
+export(soControl)
+export(trend.test)
+export(unwrap.CBData)
 
-# Export all names
-exportPattern(".")
 
-# Import all packages listed as Imports or Depends
-import(
-  boot
-)
+# Import required packages
+import(boot)
+
+# Load DLL
+useDynLib(CorrBin)
