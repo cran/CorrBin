@@ -1,7 +1,36 @@
-\name{CorrBin-internal}
-\title{Internal CorrBin objects}
+\name{mChoose}
 \alias{.required}
 \alias{DownUpMatrix}
-\description{Internal CorrBin objects.}
-\details{These are not to be called by the user.}
+\alias{Marginals}
+\alias{corr.from.pi}
+\alias{mChoose}
+\alias{mChooseTable}
+\alias{mc.est.raw}
+\alias{p.from.tau}
+\alias{tau.from.pi}
+\title{Internal CorrBin objects}
+\usage{
+mChoose(n, rvec, log = FALSE)
+
+Marginals(theta)
+
+mc.est.raw(object, ...)
+
+tau.from.pi(pimat)
+
+p.from.tau(taumat)
+
+corr.from.pi(pimat)
+
+mChooseTable(n, k, log = FALSE)
+
+DownUpMatrix(size, ntrt, turn)
+}
+\description{
+Internal CorrBin objects.
+}
+\details{
+These are not to be called by the user.
+}
 \keyword{internal}
+
