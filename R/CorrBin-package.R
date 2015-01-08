@@ -1,9 +1,9 @@
 
 
-#'Nonparameterics for correlated binary data
+#'Nonparameterics for Correlated Binary and Multinomial Data
 #'
 #'This package implements nonparametric methods for analysing exchangeable
-#'binary data with variable cluster sizes with emphasis on trend testing. The
+#'binary and multinomial data with variable cluster sizes with emphasis on trend testing. The
 #'input should specify the treatment group, cluster-size, and the number of
 #'responses (i.e. the number of cluster elements with the outcome of interest)
 #'for each cluster.
@@ -11,20 +11,20 @@
 #'\tabular{ll}{ 
 #' Package: \tab CorrBin\cr 
 #' Type: \tab Package\cr 
-#' Version: \tab 1.4\cr
-#' Date: \tab 2013-01-13\cr 
+#' Version: \tab 1.5\cr
+#' Date: \tab 2014-12-18\cr 
 #' License: \tab GPL 2\cr 
 #' LazyLoad: \tab yes\cr
 #'} 
-#'\itemize{ \item The \code{\link{CBData}} and \code{\link{read.CBData}}
-#'functions create a `CBData' object used by the analysis functions.  
-#'\item \code{\link{ran.CBData}} can be used to generate random data with
-#'prespecified mean response and within-cluster correlation.  
+#'\itemize{ \item The \code{\link{CBData}/\link{CMData}} and \code{\link{read.CBData}/\link{read.CMData}}
+#'functions create a `CBData' or `CMData' object used by the analysis functions.  
+#'\item \code{\link{ran.CBData}} and \code{\link{ran.CMData}} can be used to generate random 
+#' binary or multinomial data using a variety of distributions.  
 #'\item \code{\link{mc.test.chisq}} tests the assumption of marginal compatibility
 #'underlying all the methods, while \code{\link{mc.est}} estimates the
 #'distribution of the number of responses under marginal compatibility.  
 #'\item Finally, \code{\link{trend.test}} performs three different tests for trend
-#'along the treatment groups. }
+#'along the treatment groups for binomial data. }
 #'
 #'@name CorrBin-package
 #'@aliases CorrBin-package CorrBin
