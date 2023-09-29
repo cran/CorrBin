@@ -30,7 +30,7 @@ Components \code{Q} and \code{D} are unlikely to be needed by the user.
 
 \item{loglik}{the achieved value of the log-likelihood}
 
-\item{converge}{a 2-element vector with the achived relative error and
+\item{converge}{a 2-element vector with the achieved relative error and
 the performed number of iterations}
 }
 \description{
@@ -66,12 +66,12 @@ other functions can handle umbrella orderings.
       panel=panel.superpose, panel.groups=panel.cumsum,
       as.table=TRUE, auto.key=list(columns=4, lines=TRUE, points=FALSE),
       xlab="Number of responses", ylab="Cumulative Probability R(R>=r|N=n)",
-      ylim=c(0,1.1), main="Stochastically ordered estimates\\n with marginal compatibility")
+      ylim=c(0,1.1), main="Stochastically ordered estimates\n with marginal compatibility")
 
 }
 \references{
-Szabo A, George EO. (2009) On the Use of Stochastic Ordering to
-Test for Trend with Clustered Binary Data. \emph{Biometrika}
+Szabo A, George EO. (2010) On the Use of Stochastic Ordering to
+Test for Trend with Clustered Binary Data. \emph{Biometrika} 97(1), 95-108.
 }
 \seealso{
 \code{\link{soControl}}

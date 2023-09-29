@@ -86,12 +86,12 @@ mc.test.chisq.CBData <- function(object,...){
 #'@return \item{Q}{numeric matrix; estimated weights for the mixing distribution}
 #'@return \item{D}{numeric matrix; directional derivative of the log-likelihood}
 #'@return \item{loglik}{the achieved value of the log-likelihood}
-#'@return \item{converge}{a 2-element vector with the achived relative error and
+#'@return \item{converge}{a 2-element vector with the achieved relative error and
 #'the performed number of iterations}
 #'@author Aniko Szabo, aszabo@@mcw.edu
 #'@seealso \code{\link{soControl}}
-#'@references Szabo A, George EO. (2009) On the Use of Stochastic Ordering to
-#'Test for Trend with Clustered Binary Data. \emph{Biometrika}
+#'@references Szabo A, George EO. (2010) On the Use of Stochastic Ordering to
+#'Test for Trend with Clustered Binary Data. \emph{Biometrika} 97(1), 95-108.
 #'@keywords nonparametric models
 #'@examples
 #'
@@ -171,7 +171,7 @@ SO.mc.est <- function(cbdata, turn=1, control=soControl()){
 #'@param method a string specifying the maximization method
 #'@param eps a numeric value giving the maximum absolute error in the
 #'log-likelihood
-#'@param max.iter an interger specifying the maximal number of iterations
+#'@param max.iter an integer specifying the maximal number of iterations
 #'@param max.directions an integer giving the maximal number of directions
 #'considered at one step of the ISDM method.  If zero or negative, it is set to
 #'the number of non-empty cells. A value of 1 corresponds to the VDM algorithm.
@@ -328,14 +328,15 @@ SO.LRT <- function(cbdata, control=soControl()){
 #'@author Aniko Szabo, aszabo@@mcw.edu
 #'@seealso \code{\link{SO.LRT}} for calculating only the test statistic,
 #'\code{\link{soControl}}
-#'@references Szabo A, George EO. (2009) On the Use of Stochastic Ordering to
-#'Test for Trend with Clustered Binary Data.
+#'@references Szabo A, George EO. (2010) On the Use of Stochastic Ordering to
+#'Test for Trend with Clustered Binary Data. \emph{Biometrika} 97(1), 95-108.
 #'@keywords htest nonparametric
 #'@examples
 #'
+#'\donttest{
 #'data(shelltox)
 #'set.seed(45742)
-#'sh.test <- SO.trend.test(shelltox, R=5, control=soControl(eps=0.1, max.directions=25)) 
+#'sh.test <- SO.trend.test(shelltox, R=10, control=soControl(eps=0.1, max.directions=25)) 
 #'sh.test
 #'
 #'#a plot of the resampled LRT values
@@ -344,6 +345,7 @@ SO.LRT <- function(cbdata, control=soControl()){
 #' hist(null.vals, breaks=10,  freq=FALSE, xlab="Test statistic", ylab="Density", 
 #'      main="Simulated null-distribution", xlim=range(c(0,20,null.vals)))
 #' points(sh.test$LRT, 0, pch="*",col="red", cex=3)
+#'}
 #'
 
 SO.trend.test <- function(cbdata, R=100, control=soControl()){
